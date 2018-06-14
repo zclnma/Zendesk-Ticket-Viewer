@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 Python3 and an external 'requests' library are needed to run the code.
 
 ```
-pip install requests
+pip3 install requests
 ```
 
 ### Installing

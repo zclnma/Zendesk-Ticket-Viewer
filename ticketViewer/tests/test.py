@@ -1,3 +1,5 @@
+"""Test two functions in the main to make sure there is no bug in the system"""
+
 import unittest
 from ticketViewer.main import TicketController
 

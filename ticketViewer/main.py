@@ -71,24 +71,24 @@ class TicketController:
     def run(self):
         """System starts"""
 
-        ##read config file
+        ##1.read config file
         self.__read_config()
 
-        ##auth string after base64 authentication
+        ##2.auth string after base64 authentication
         auth = self.__base64_auth('%s:%s' % (self.__username, self.__password))
 
 
-        ##1. Retrieve tickets from the server
+        ##3. Retrieve tickets from the server
         self.model.retrieve_ticket(self.__url, auth)
 
-        ##2. Get tickets from the model and update tickets in the view
+        ##4. Get tickets from the model and update tickets in the view
         self.__tickets = self.model.get_tickets()
         self.view.update_tickets_in_view(self.__tickets)
 
-        ##3. Show system startup message
+        ##5. Show system startup message
         self.view.startup_message()
 
-        ##4. Start the ticket viewer system
+        ##6. Start the ticket viewer system
         while True:
 
             #will check all input from user. If any input is 'quit', the whole system will quit

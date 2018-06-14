@@ -17,7 +17,7 @@ class TicketView:
         print('Welcome to the ticket viewer.')
         print('You can quit ticket viewer by entering "quit" at anytime.')
         print()
-        print('-----------------------------------------------------------------')
+        print('---------------------------------------------------------------------')
         print()
         time.sleep(1)
 
@@ -43,12 +43,12 @@ class TicketView:
     @classmethod
     def option1(cls):
         """The first option when entering the app. user can update,view or quit system"""
-        return input('Enter menu to view options or update to update tickets.\n')
+        return input('Enter menu to view tickets or update to update tickets.\n')
 
     @classmethod
     def option2(cls):
         """The following option when user select menu"""
-        print('Please select view mode:')
+        print('Please enter 1, 2 or 3 to choose from options below:')
         print('    1: View all tickets')
         print('    2: View one ticket')
         print('    3: Back to menu')
@@ -57,16 +57,16 @@ class TicketView:
     @classmethod
     def single_ticket_option(cls, num_of_tickets):
         """The following option when user select view one ticket."""
-        print('Please select the ticket number(1 - ' + str(num_of_tickets) +
-              ') you want to view or enter back to go back')
+        print('Please enter a ticket number(1 - ' + str(num_of_tickets) +
+              ') or enter back to return to mode selection')
         return input()
 
     @classmethod
     def detail_or_page_changer_option(cls):
         """The following option when user select view all tickets"""
         return input('Enter ticket ID for more information or '
-                     'p + number to go to select page (eg. p2 to go to page 2).'
-                     'Enter back to go back to mode selection\n')
+                     'p + number to go to select page (eg. p2 to go to page 2).\n'
+                     'Enter back to return to mode selection\n')
 
     def view_ticket_detail(self, index_of_ticket):
         """display the detail of a single ticket"""
@@ -79,7 +79,7 @@ class TicketView:
         print('Subject: ' + current_ticket['subject'])
         print('Description: ' + current_ticket['description'])
         print()
-        print('---------------------------------------------------------------------------')
+        print('----------------------------------------------------------------------------')
         print()
         time.sleep(0.8)
 
@@ -87,6 +87,11 @@ class TicketView:
         """display the ticket of all tickets in a specific page.
         ticket per page is set to 25"""
 
+        print()
+        print('Page: ' + str(current_page) + '/' + str(total_page))
+        print()
+        print('-----------------------------------------------------------------------------')
+        print()
         for instance in range(item_per_page):
             current_id = instance + item_per_page * (current_page - 1)
             if current_page != total_page:
@@ -103,6 +108,3 @@ class TicketView:
         print()
         print('-----------------------------------------------------------------------------\n')
         print()
-        print('Page: ' + str(current_page) + '/' + str(total_page))
-        print()
-
