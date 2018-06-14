@@ -27,7 +27,7 @@ If you see
 Connecting to https://lionel.zendesk.com/api/v2/tickets.json?per_page=25...
 Connecting successfully
 Welcome to the ticket viewer.
-You can quit ticket viewer by typing "quit" at anytime.
+You can quit ticket viewer by entering "quit" at anytime.
 
 ```
 You are now successfully entering the system.
