@@ -16,7 +16,7 @@ pip install requests
 
 ### Installing
 
-Running the code is simple. Simply go to  ```ticket_Viewer``` directory and run
+Running the code is simple. Simply go to  ```ticketViewer``` directory and run
 
 ```
 python3 main.py
@@ -32,13 +32,13 @@ You can quit ticket viewer by typing "quit" at anytime.
 ```
 You are now successfully entering the system.
 
-You can connect to any website by changing config file in  ```ticket_Viewer/config.txt```
+You can connect to any website by changing config file in  ```ticketViewer/config.txt```
 
 
 
 
 ## Authors
 
-* **Lionel Zhao** - *Initial work* - [PurpleBooth](https://github.com/zclnma)
+* **Lionel Zhao** - [zclnma](https://github.com/zclnma)
 
 
