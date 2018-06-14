@@ -1,0 +1,5 @@
+[configuration]
+url = https://lionel.zendesk.com/api/v2/tickets.json?per_page=25
+username = lionelcdqz@gmail.com
+password = zendesk2018
+item_per_page = 14
