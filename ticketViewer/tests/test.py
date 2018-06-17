@@ -32,6 +32,19 @@ class TestModel(unittest.TestCase):
         self.assertTrue(controller._TicketController__is_page_changer("p1", 8))
         self.assertTrue(controller._TicketController__is_page_changer("p9", 9))
         self.assertTrue(controller._TicketController__is_page_changer("p6", 9))
-        
+
+    def test_is_number_valie(self):
+        controller = TicketController()
+        self.assertTrue(controller._TicketController__number_valid(25, 2, 3, 25, 101))
+        self.assertTrue(controller._TicketController__number_valid(1, 2, 4, 25, 101))
+        self.assertTrue(controller._TicketController__number_valid(15, 1, 3, 25, 101))
+        self.assertTrue(controller._TicketController__number_valid(17, 2, 3, 28, 101))
+        self.assertTrue(controller._TicketController__number_valid(1, 2, 3, 33, 101))
+        self.assertFalse(controller._TicketController__number_valid(0, 2, 3, 25, 101))
+        self.assertFalse(controller._TicketController__number_valid(2348, 2, 3, 25, 101))
+        self.assertFalse(controller._TicketController__number_valid(26, 2, 3, 25, 101))
+        self.assertFalse(controller._TicketController__number_valid(2, 5, 5, 25, 101))
+        self.assertFalse(controller._TicketController__number_valid(0, 2, 3, 25, 101))
+
 if __name__ == '__main__':
     unittest.main()
